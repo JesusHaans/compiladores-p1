@@ -1,0 +1,47 @@
+\documentclass[12pt]{article}
+\usepackage{listingsutf8} % Include the listings package
+\usepackage[T1]{fontenc} % Add the fontenc package with T1 encoding
+\usepackage{subcaption}
+\usepackage{setspace}
+\usepackage{./Layout/EngReport}
+
+\graphicspath{{Images/}}
+\bibliography{Layout/src.bib}
+\onehalfspacing
+\graphicspath{Images/}
+\geometry{letterpaper, portrait, includeheadfoot=true, hmargin=1in, vmargin=1in}
+
+
+\begin{document}
+\renewcommand{\familydefault}{\rmdefault}
+
+\input{./Layout/titlepage}
+\input{./Layout/headerfooter}
+\tableofcontents
+\pagebreak
+
+
+\fontsize{12}{20}\selectfont{
+
+\input{./Sections/0_Introduccion}
+\pagebreak
+
+\input{./Sections/1_Desarrollo}
+\pagebreak
+
+\input{./Sections/2_Preguntas}
+\pagebreak
+
+\cite{*}
+\bibliography{Layout/referencias}
+\pagebreak
+
+\input{./Sections/A_Codigos}
+\pagebreak
+
+
+
+}
+
+
+\end{document}
